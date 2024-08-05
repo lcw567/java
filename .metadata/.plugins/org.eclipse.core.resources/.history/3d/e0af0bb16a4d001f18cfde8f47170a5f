@@ -1,0 +1,10 @@
+package test240729.object1;
+
+public class LotteryMenu {
+
+	public void mainMenu() {
+		System.out.println("========== KH 추첨 프로그램 ==========");
+		
+	}
+
+}

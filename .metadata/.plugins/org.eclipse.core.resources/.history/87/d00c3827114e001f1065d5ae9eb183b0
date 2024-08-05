@@ -1,0 +1,44 @@
+package test240730.object1;
+
+public class MemberMenu {
+
+	public void mainMenu() {
+		// TODO Auto-generated method stub
+		
+		System.out.println("========== KH 사이트 ==========");
+		
+		System.out.println("******* 메인 메뉴 *******");
+		System.out.println("1. 회원가입");
+		System.out.println("2. 로그인");
+		System.out.println("3. 같은 이름 회원 찾기 ");
+		System.out.println("9. 종료");
+		System.out.print("메뉴 번호 선택 : ");
+
+		
+	}
+
+	public void memberMenu() {
+		
+	}
+	
+	public void joinMembership() {
+		
+	}
+	
+	public void logIn() {
+		
+	}
+	
+	public void changePassword() {
+		
+	}
+
+	public void changeName() {
+		
+	}
+	
+	public void sameName(){
+		
+	}
+	
+}

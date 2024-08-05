@@ -1,0 +1,69 @@
+package test240730.object1;
+
+import java.util.Scanner;
+
+public class MemberMenu {
+
+	public void mainMenu() {
+		Scanner sc = new Scanner(System.in);
+		MemberController mc = new MemberController();
+		
+		System.out.println("========== KH 사이트 ==========");
+		
+		while(true) {
+		System.out.println("******* 메인 메뉴 *******");
+		System.out.println("1. 회원가입");
+		System.out.println("2. 로그인");
+		System.out.println("3. 같은 이름 회원 찾기 ");
+		System.out.println("9. 종료");
+		System.out.print("메뉴 번호 선택 : ");
+		
+		int choice = sc.nextInt();
+		sc.nextLine();
+		
+		switch(choice) {
+		case 1:
+			joinMembership();
+			break;
+		case 2:
+			memberMenu();
+			break;
+		case 3:
+			sameName();
+			break;
+		case 9:
+			System.out.println("프로그램 종료.");
+			return;
+		default:
+			System.out.println("잘못 입력하였습니다. 다시 입력해주세요");
+		
+
+		}
+	}
+}
+
+	public void memberMenu() {
+		
+	}
+	
+	public void joinMembership() {
+		
+	}
+	
+	public void logIn() {
+		
+	}
+	
+	public void changePassword() {
+		
+	}
+
+	public void changeName() {
+		
+	}
+	
+	public void sameName(){
+		
+	}
+	
+}

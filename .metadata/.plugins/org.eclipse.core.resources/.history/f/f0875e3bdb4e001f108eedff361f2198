@@ -1,0 +1,16 @@
+package q.thread.ex1;
+
+public class Run {
+
+	public static void main(String[] args) {
+			Task t1 = new Task();
+			Runnable task = new MyRunable();
+			Thread t2 = new Thread(task);
+			
+			t1.start();
+			
+			System.out.println("END : " + Thread.currentThread().getName());
+
+	}
+
+}

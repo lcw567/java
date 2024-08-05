@@ -1,0 +1,59 @@
+package o.collection.set;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
+
+public class SetRun {
+
+	public static void main(String[] args) {
+		// Object에 equals() => 두객체의 주소값을 비교해서 일치하면 트루 일치하지 않으면 펄스
+		//Object hashcode() => 해당 객체의 주소값을 가지고 10 진수의 형태로 만들어서 반환
+		
+		HashSet hsi = new HashSet();
+		
+		hsi.add("반갑습니다");
+		hsi.add(new String("반갑습니다."));
+		hsi.add(new String("여러분"));
+		hsi.add(new String("안녕하세요."));
+		hsi.add(new String("여러분"));
+
+		System.out.println(hsi);//저장순서를 유지하지 않는다! 중복된 데이터(동일객체) 보관 불가
+		//String equals()오버라이딘 => 실제 담긴 문자열을 가지고 동등비교를 진행해서 일치하면 트루 일치하지않으면 펄스
+		//String hashCode() 오버라이딩 => 실제 담긴 문자열을 가지고 10진구의 형태로 만들어서 반환
+	
+		HashSet hsi2 = new HashSet();
+		hsi2.add(new Student("최지원",22,95));
+		hsi2.add(new Student("홍길동",42,90));
+		hsi2.add(new Student("김지민",32,99));
+		hsi2.add(new Student("최지원",22,95));
+		
+		
+		//동일객체 : 각 객체마다 hashCode결과가 일치하고, equals메소드로 비교시 true가 나올때
+		
+		//Student에 equals() 오버라이딩 => "실제 가 필드에 담긴 데이터"들이 다 일치하면 트루 일치하지 않으면 펄스 반환
+		System.out.println(hsi2);
+		
+		//hsi2.get() 인덱스의 개념이 없기 때문에 get 을 할 수 없음 -> 한개씩 무작의로 가져올수 있음
+		
+		for(Object s : hsi2) {
+			System.out.println(s);
+			
+		}
+		
+		Iterator it =hsi2.iterator();
+		
+		while(it.hasNext()) {
+			Object obj = it.next();
+			System.out.println(obj);
+			
+		}
+		ArrayList list = new ArrayList();
+		list.addAll(hsi2);
+		
+		for(int i=0; i< list.size();i++) {
+			System.out.println(list.get(i));
+		}
+	}
+
+}

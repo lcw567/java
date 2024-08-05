@@ -1,0 +1,40 @@
+package test240731.object1;
+
+import java.util.Objects;
+
+public class Vegetable extends Farm {
+    private String name;
+
+    public Vegetable() {}
+
+    public Vegetable(String kind, String name) {
+        super(kind);
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return getKind() + ": " + name;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getKind(), name);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Vegetable vegetable = (Vegetable) obj;
+        return Objects.equals(getKind(), vegetable.getKind()) && Objects.equals(name, vegetable.name);
+    }
+}

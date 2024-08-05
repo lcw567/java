@@ -1,0 +1,22 @@
+package o.collection.set;
+
+import java.util.HashSet;
+
+public class SetRun {
+
+	public static void main(String[] args) {
+		// Object에 equals() => 두객체의 주소값을 비교해서 일치하면 트루 일치하지 않으면 펄스
+		//Object hashcode() => 해당 객체의 주소값을 가지고 10 진수의 형태로 만들어서 반환
+		
+		HashSet hsi = new HashSet();
+		
+		hsi.add("반갑습니다");
+		hsi.add(new String("반갑습니다."));
+		hsi.add(new String("여러분"));
+		hsi.add(new String("안녕하세요."));
+		hsi.add(new String("여러분"));
+
+		System.out.println(hsi);
+	}
+
+}

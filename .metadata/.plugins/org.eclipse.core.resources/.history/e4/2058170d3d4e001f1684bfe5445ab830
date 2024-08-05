@@ -1,0 +1,47 @@
+package p.network;
+
+import java.io.IOException;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.SocketException;
+import java.net.UnknownHostException;
+
+public class UDPServer {
+
+
+	public static void main(String[] args) {
+		
+		int port = 4000;
+		
+		try {
+			DatagramSocket doc = new DatagramSocket(port);
+			
+			byte[] data = new byte[60000];
+			
+			DatagramPacket dp = new DatagramPacket(data, data.length);
+			System.out.println("준비완료");
+			
+			while(true) {
+				dsoc.receive(dp);
+				
+				System.out.println("클라이언트 ip: " + dp.getAddress());
+				String message = new String(dp.getData(), "UTF-8");
+				System.out.println("클라이언트가 보낸 내용 : " + message);
+			}
+				
+		} catch (SocketException e) {
+			
+			e.printStackTrace();
+		}catch (UnknownHostException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+
+	}
+
+}

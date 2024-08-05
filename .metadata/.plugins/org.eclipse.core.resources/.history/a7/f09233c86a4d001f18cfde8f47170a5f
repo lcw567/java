@@ -1,0 +1,58 @@
+package test240729.object1;
+
+import java.util.Scanner;
+
+
+public class LotteryMenu {
+	
+	private Scanner sc = new Scanner(System.in);
+	private LotteryController mc = new LotteryController();
+
+	public void mainMenu() {
+		while(true) {
+			System.out.println("========== KH 추첨 프로그램 ==========");
+			System.out.println("1. 추첨 대상 추가");
+			System.out.println("2. 추첨 대상 삭제");
+			System.out.println("3. 당첨 대상 확인");
+			System.out.println("4. 정렬된 당첨 대상 확인");
+			System.out.println("5. 당첨 대상 검색 ");
+			System.out.println("9. 종료");
+			System.out.print("메뉴 번호 선택 :");
+		
+			int choice = sc.nextInt();
+			sc.nextLine();
+			
+			switch(choice) {
+			case 1:
+				this.addList();
+				break;
+			case 2:
+				this.addAtZero();
+				break;
+			case 3:
+				this.printAll();
+				break;
+			case 4:
+				this.searchMusic();
+				break;
+			case 5:
+				this.removeMusic();
+				break;
+			case 6:
+				this.setMusic();
+				break;
+			case 7:
+				this.ascTitle();
+				break;
+			case 8:
+				this.descSinger();
+				break;
+			case 9:
+				System.out.println("종료");
+				return;
+			default:
+				System.out.println("잘못입력하셨습니다. 다시입력해주세요.");
+			}
+		}
+	}
+}

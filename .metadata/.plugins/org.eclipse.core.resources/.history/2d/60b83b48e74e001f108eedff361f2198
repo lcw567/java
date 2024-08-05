@@ -1,0 +1,18 @@
+package q.thread.ex1;
+
+//쓰레드 생성방법1
+//Thread를 상속받는 클래스를 작성한다
+public class Task extends Thread{
+
+	@Override
+	public void run() {
+		int n1 =20;
+		int n2 =30;
+		
+		//currentThread(): 지금실행하고있는 쓰레드의 정보 객체를 반환
+		String name = Thread.currentThread().getName();
+		System.out.println(name + " : " +(n1+n2));
+		super.run();
+	}
+
+}

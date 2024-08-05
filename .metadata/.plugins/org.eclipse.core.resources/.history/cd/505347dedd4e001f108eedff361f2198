@@ -1,0 +1,14 @@
+package q.thread.chat;
+
+import java.net.Socket;
+
+public class ServerReveive {
+	private Socket socket;
+
+	public ServerReveive(Socket socket) {
+		super();
+		this.socket = socket;
+	}
+	
+	
+}

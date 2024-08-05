@@ -1,0 +1,24 @@
+package q.thread.chat;
+
+import java.io.IOException;
+import java.net.Socket;
+
+public class TCPClient {
+
+	public static void main(String[] args) {
+		
+		try {
+			Socket socket = new Socket("localhost", 5000);
+			ClientReceive task1 = new ClientReceive(socket);
+			task1.start();
+			
+			ClientReceive task2 = new ClientSend(socket);
+			task2.start();
+			
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+
+	}
+	}
+}

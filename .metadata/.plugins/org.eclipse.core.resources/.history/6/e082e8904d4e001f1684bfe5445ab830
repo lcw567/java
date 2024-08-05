@@ -1,0 +1,19 @@
+package project2;
+
+import java.util.Scanner;
+
+
+public class ClassMenu {
+	Scanner sc = new Scanner(System.in);
+	
+	ClassController cc = new ClassController();
+	
+	public void mainMenu() {
+		System.out.println("=====수강신청 프로그램=====");
+		System.out.println(" 1. 수강 신청 ");
+		System.out.println(" 2. 수강 취소 ");
+		System.out.println(" 3. 강의 검색 ");
+		System.out.println(" 4. 수강 정보 조회");
+		System.out.println();
+	}
+}

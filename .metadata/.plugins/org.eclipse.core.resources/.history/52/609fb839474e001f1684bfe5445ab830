@@ -1,0 +1,60 @@
+package project2;
+
+public class Student {
+	private String name;
+	private int number;
+	private String password;
+	private int grade;
+	
+	public Student() {
+		super();
+	}
+
+	public Student(String name, int number, String password, int grade) {
+		super();
+		this.name = name;
+		this.number = number;
+		this.password = password;
+		this.grade = grade;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getNumber() {
+		return number;
+	}
+
+	public void setNumber(int number) {
+		this.number = number;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public int getGrade() {
+		return grade;
+	}
+
+	public void setGrade(int grade) {
+		this.grade = grade;
+	}
+
+	@Override
+	public String toString() {
+		return "Student [name=" + name + ", number=" + number + ", password=" + password + ", grade=" + grade + "]";
+	}
+	
+	
+	
+}
