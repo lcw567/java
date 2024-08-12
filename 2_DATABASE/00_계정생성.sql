@@ -1,0 +1,12 @@
+/*SELECT * FROM ALL_USERS;*/
+
+
+/*계정 생성 방법
+CREATE USER 이름 IDENTIFIED BY 비밀번호
+
+GRANT 권한 TO 계정명
+*/
+CREATE USER KH IDENTIFIED BY KH;
+
+--KH 계정에 최소한 권한 부여(접속, 데이터관리)
+GRANT CONNECT, RESOURCE TO KH;
