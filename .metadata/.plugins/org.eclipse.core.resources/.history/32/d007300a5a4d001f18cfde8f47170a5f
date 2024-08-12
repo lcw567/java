@@ -1,0 +1,12 @@
+package o.collection.map;
+
+import java.util.HashMap;
+
+public class MapRun {
+
+	public static void main(String[] args) {
+		HashMap hm = new HashMap();
+
+	}
+
+}

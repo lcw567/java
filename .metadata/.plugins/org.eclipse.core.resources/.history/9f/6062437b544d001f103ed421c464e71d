@@ -1,0 +1,32 @@
+package o.collection.set;
+
+import java.util.HashSet;
+
+public class SetRun {
+
+	public static void main(String[] args) {
+		// Object에 equals() => 두객체의 주소값을 비교해서 일치하면 트루 일치하지 않으면 펄스
+		//Object hashcode() => 해당 객체의 주소값을 가지고 10 진수의 형태로 만들어서 반환
+		
+		HashSet hsi = new HashSet();
+		
+		hsi.add("반갑습니다");
+		hsi.add(new String("반갑습니다."));
+		hsi.add(new String("여러분"));
+		hsi.add(new String("안녕하세요."));
+		hsi.add(new String("여러분"));
+
+		System.out.println(hsi);//저장순서를 유지하지 않는다! 중복된 데이터(동일객체) 보관 불가
+		//String equals()오버라이딘 => 실제 담긴 문자열을 가지고 동등비교를 진행해서 일치하면 트루 일치하지않으면 펄스
+		//String hashCode() 오버라이딩 => 실제 담긴 문자열을 가지고 10진구의 형태로 만들어서 반환
+	
+		HashSet hsi2 = new HashSet();
+		hsi2.add(new Student("최지원",22,95));
+		hsi2.add(new Student("홍길동",42,90));
+		hsi2.add(new Student("김지민",32,99));
+		hsi2.add(new Student("최지원",22,95));
+		
+		System.out.println(hsi2);
+	}
+
+}

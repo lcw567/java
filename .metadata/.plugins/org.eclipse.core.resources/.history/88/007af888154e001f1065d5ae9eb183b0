@@ -1,0 +1,37 @@
+package test240730.object1;
+
+import java.util.TreeMap;
+
+public class MemberController {
+
+	public boolean joinMembership(String id, Member m){
+		return false;
+		
+	}
+	
+	public boolean logIn(String id, String password){
+		return false;
+		
+	}
+	
+	public boolean changePassword(String id, String oldPw, String newPw){
+		return false;
+		
+	}
+	
+	public void changeName(String id, String newName) {
+		
+	}
+	
+	public TreeMap sameName(String name){
+		return null;
+		
+	}
+
+	public boolean insertObject(Member me) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+	
+}

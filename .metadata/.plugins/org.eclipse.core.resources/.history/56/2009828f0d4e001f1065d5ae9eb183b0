@@ -1,0 +1,10 @@
+package test240730.object1;
+
+public class MemberMenu {
+
+	public void mainMenu() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
