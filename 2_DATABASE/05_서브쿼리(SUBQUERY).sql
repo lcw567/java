@@ -180,7 +180,7 @@ WHERE JOB_NAME ='대리'
 
 --1) 하이유 사원과 같은 부서코드, 같은 직급코드에 해당하는 사원들 조회
 --(사원명, 부서코드, 직급코드, 입사일)
---> 단일행 서브쿼리
+-- 단일행 서브쿼리
 SELECT EMP_NAME, DEPT_CODE, JOB_CODE, HIRE_DATE
 FROM EMPLOYEE
 WHERE DEPT_CODE = (SELECT DEPT_CODE
